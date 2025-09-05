@@ -1,3 +1,43 @@
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
+    
+    // Create overlay div
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-overlay';
+    document.body.appendChild(overlay);
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        });
+        
+        // Close menu when clicking nav links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+    }
+});
+
 // Language Management
 let currentLanguage = 'fr';
 
