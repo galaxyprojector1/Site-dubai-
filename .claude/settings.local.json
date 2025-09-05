@@ -6,7 +6,12 @@
       "Bash(git push:*)",
       "Bash(npx vercel:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "mcp__perplexity-unified__perplexity_search_web",
+      "Bash(node:*)",
+      "Bash(npm install:*)",
+      "Bash(npx @playwright/mcp@latest:*)",
+      "Bash(npm init:*)"
     ],
     "deny": [],
     "ask": []

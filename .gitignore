@@ -1,1 +1,6 @@
 .vercel
+
+# MCP Tests
+.mcp-tests/results/
+*.png
+*.jpg
