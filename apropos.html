@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Dubai Business Setup | Experts francophones création société Dubaï</title>
+    <meta name="description" content="Découvrez notre équipe d'experts francophones en création d'entreprise à Dubaï. Plus de 90,000 entrepreneurs accompagnés. Témoignages et success stories.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2>Dubai<span class="gold">Business</span></h2>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="formules.html" class="nav-link">Nos Formules</a></li>
+                    <li><a href="apropos.html" class="nav-link active">À Propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn" onclick="switchLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">FR</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header with Video Background -->
+    <section class="page-header hero-about" style="position: relative; min-height: 400px; display: flex; align-items: center; overflow: hidden; margin-top: 70px;">
+        <!-- Background Image -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+            <img src="Image/team-clean-dubai.png.png" alt="Équipe Dubai Business" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 33, 102, 0.8);"></div>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <h1 class="text-center animate-fade-in" style="color: white; font-size: 3rem;">
+                <span class="fr-content">15 Ans d'Excellence</span>
+                <span class="en-content hidden">15 Years of Excellence</span>
+            </h1>
+            <p class="text-center animate-fade-in-delay" style="color: white; font-size: 1.5rem; margin-top: 1rem;">
+                <span class="fr-content">Plus de 90,000 entrepreneurs accompagnés vers la liberté fiscale</span>
+                <span class="en-content hidden">Over 90,000 entrepreneurs guided to tax freedom</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Services Section -->
+    <section class="key-services" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Notre Expertise Complète</span>
+                    <span class="en-content hidden">Our Complete Expertise</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="fr-content">Services spécialisés pour entrepreneurs francophones</span>
+                    <span class="en-content hidden">Specialized services for French-speaking entrepreneurs</span>
+                </p>
+            </div>
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="service-card" style="background: white; padding: 2rem; border-radius: 10px; border-left: 4px solid var(--gold);">
+                    <h3><i class="fas fa-building" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">Types de Sociétés</span>
+                        <span class="en-content hidden">Company Types</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Mainland : activités locales et internationales</span>
+                            <span class="en-content hidden">Mainland: local and international activities</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Freezone : 0% d'impôt, 100% propriété étrangère</span>
+                            <span class="en-content hidden">Freezone: 0% tax, 100% foreign ownership</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Offshore : gestion patrimoniale internationale</span>
+                            <span class="en-content hidden">Offshore: international wealth management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="background: white; padding: 2rem; border-radius: 10px; border-left: 4px solid var(--gold);">
+                    <h3><i class="fas fa-passport" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">Services Visa</span>
+                        <span class="en-content hidden">Visa Services</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Visa investisseur 2-3 ans renouvelable</span>
+                            <span class="en-content hidden">2-3 year renewable investor visa</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Visa famille (conjoint + enfants)</span>
+                            <span class="en-content hidden">Family visa (spouse + children)</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Golden Visa 5-10 ans (conditions spéciales)</span>
+                            <span class="en-content hidden">Golden Visa 5-10 years (special conditions)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="service-card" style="background: white; padding: 2rem; border-radius: 10px; border-left: 4px solid var(--gold);">
+                    <h3><i class="fas fa-university" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">Services Bancaires</span>
+                        <span class="en-content hidden">Banking Services</span>
+                    </h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Compte société multi-devises</span>
+                            <span class="en-content hidden">Multi-currency corporate account</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Cartes bancaires internationales</span>
+                            <span class="en-content hidden">International bank cards</span>
+                        </li>
+                        <li style="padding: 0.5rem 0;"><i class="fas fa-check-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Banking en ligne 24/7</span>
+                            <span class="en-content hidden">24/7 online banking</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats -->
+    <section class="company-stats" style="background: var(--primary-blue); color: white; padding: 3rem 0;">
+        <div class="container">
+            <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div class="stat-item">
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: var(--gold);">90,000+</div>
+                    <div class="stat-label" style="font-size: 1.125rem; margin-top: 0.5rem;">
+                        <span class="fr-content">Entrepreneurs accompagnés</span>
+                        <span class="en-content hidden">Entrepreneurs served</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: var(--gold);">15+</div>
+                    <div class="stat-label" style="font-size: 1.125rem; margin-top: 0.5rem;">
+                        <span class="fr-content">Années d'expérience</span>
+                        <span class="en-content hidden">Years of experience</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: var(--gold);">98%</div>
+                    <div class="stat-label" style="font-size: 1.125rem; margin-top: 0.5rem;">
+                        <span class="fr-content">Taux de satisfaction</span>
+                        <span class="en-content hidden">Satisfaction rate</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" style="font-size: 3rem; font-weight: 800; color: var(--gold);">24/7</div>
+                    <div class="stat-label" style="font-size: 1.125rem; margin-top: 0.5rem;">
+                        <span class="fr-content">Support disponible</span>
+                        <span class="en-content hidden">Support available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="story-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="story-text">
+                    <h2 class="section-title">
+                        <span class="fr-content">Notre Mission</span>
+                        <span class="en-content hidden">Our Mission</span>
+                    </h2>
+                    <p style="margin-bottom: 1.5rem;">
+                        <span class="fr-content">
+                            Fondée par des entrepreneurs français passionnés par les opportunités qu'offre Dubaï, notre société est née d'un constat simple : les entrepreneurs francophones méritent un accompagnement expert dans leur langue maternelle pour conquérir les marchés du Moyen-Orient.
+                        </span>
+                        <span class="en-content hidden">
+                            Founded by French entrepreneurs passionate about the opportunities Dubai offers, our company was born from a simple observation: French-speaking entrepreneurs deserve expert support in their native language to conquer Middle Eastern markets.
+                        </span>
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        <span class="fr-content">
+                            Depuis plus de 15 ans, nous avons aidé des milliers d'entrepreneurs à réaliser leur rêve de liberté fiscale et d'expansion internationale. Notre expertise unique combine une connaissance approfondie du marché local et une compréhension parfaite des besoins spécifiques des entreprises françaises et francophones.
+                        </span>
+                        <span class="en-content hidden">
+                            For over 15 years, we have helped thousands of entrepreneurs realize their dream of tax freedom and international expansion. Our unique expertise combines deep knowledge of the local market with a perfect understanding of the specific needs of French and French-speaking businesses.
+                        </span>
+                    </p>
+                    <div class="mission-values" style="margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">
+                            <span class="fr-content">Nos Valeurs</span>
+                            <span class="en-content hidden">Our Values</span>
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 1rem;"></i>
+                                <span class="fr-content">Transparence totale dans nos tarifs et processus</span>
+                                <span class="en-content hidden">Complete transparency in our pricing and processes</span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 1rem;"></i>
+                                <span class="fr-content">Excellence dans l'accompagnement personnalisé</span>
+                                <span class="en-content hidden">Excellence in personalized support</span>
+                            </li>
+                            <li style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 1rem;"></i>
+                                <span class="fr-content">Innovation constante pour simplifier vos démarches</span>
+                                <span class="en-content hidden">Constant innovation to simplify your procedures</span>
+                            </li>
+                            <li style="display: flex; align-items: center;">
+                                <i class="fas fa-check-circle" style="color: var(--gold); margin-right: 1rem;"></i>
+                                <span class="fr-content">Intégrité dans toutes nos relations d'affaires</span>
+                                <span class="en-content hidden">Integrity in all our business relationships</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="story-image">
+                    <img src="Image/team-clean-dubai.png.png" alt="Notre équipe" style="width: 100%; border-radius: 10px; box-shadow: var(--shadow-xl);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Notre Équipe d'Experts</span>
+                    <span class="en-content hidden">Our Team of Experts</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="fr-content">Des professionnels passionnés à votre service</span>
+                    <span class="en-content hidden">Passionate professionals at your service</span>
+                </p>
+            </div>
+
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="team-member" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                    <img src="https://via.placeholder.com/300x300" alt="CEO" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Alexandre Martin</h3>
+                        <p style="color: var(--gold); font-weight: 600; margin-bottom: 1rem;">
+                            <span class="fr-content">Fondateur & CEO</span>
+                            <span class="en-content hidden">Founder & CEO</span>
+                        </p>
+                        <p>
+                            <span class="fr-content">Entrepreneur français installé à Dubaï depuis 2008. Expert en structuration d'entreprises et optimisation fiscale internationale.</span>
+                            <span class="en-content hidden">French entrepreneur based in Dubai since 2008. Expert in company structuring and international tax optimization.</span>
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" style="color: var(--secondary-blue); margin-right: 1rem;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: var(--secondary-blue);"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                    <img src="https://via.placeholder.com/300x300" alt="COO" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Sarah Dubois</h3>
+                        <p style="color: var(--gold); font-weight: 600; margin-bottom: 1rem;">
+                            <span class="fr-content">Directrice Opérationnelle</span>
+                            <span class="en-content hidden">Chief Operating Officer</span>
+                        </p>
+                        <p>
+                            <span class="fr-content">15 ans d'expérience dans l'accompagnement d'entreprises. Spécialiste des procédures administratives et bancaires aux EAU.</span>
+                            <span class="en-content hidden">15 years of experience in business support. Specialist in administrative and banking procedures in the UAE.</span>
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" style="color: var(--secondary-blue); margin-right: 1rem;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: var(--secondary-blue);"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                    <img src="https://via.placeholder.com/300x300" alt="Legal Advisor" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Mohammed Al-Rashid</h3>
+                        <p style="color: var(--gold); font-weight: 600; margin-bottom: 1rem;">
+                            <span class="fr-content">Conseiller Juridique Senior</span>
+                            <span class="en-content hidden">Senior Legal Advisor</span>
+                        </p>
+                        <p>
+                            <span class="fr-content">Avocat émirati francophone. Expert en droit des sociétés et réglementation des zones franches. Plus de 20 ans d'expérience.</span>
+                            <span class="en-content hidden">French-speaking Emirati lawyer. Expert in corporate law and free zone regulations. Over 20 years of experience.</span>
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" style="color: var(--secondary-blue); margin-right: 1rem;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: var(--secondary-blue);"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member" style="background: white; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                    <img src="https://via.placeholder.com/300x300" alt="Tax Advisor" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div style="padding: 1.5rem;">
+                        <h3>Pierre Laurent</h3>
+                        <p style="color: var(--gold); font-weight: 600; margin-bottom: 1rem;">
+                            <span class="fr-content">Expert-Comptable & Fiscaliste</span>
+                            <span class="en-content hidden">Chartered Accountant & Tax Expert</span>
+                        </p>
+                        <p>
+                            <span class="fr-content">Diplômé expertise comptable France. Spécialiste de l'optimisation fiscale France-UAE et de la nouvelle taxe corporative.</span>
+                            <span class="en-content hidden">French chartered accountant. Specialist in France-UAE tax optimization and new corporate tax.</span>
+                        </p>
+                        <div style="margin-top: 1rem;">
+                            <a href="#" style="color: var(--secondary-blue); margin-right: 1rem;"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" style="color: var(--secondary-blue);"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Pourquoi Nous Choisir?</span>
+                    <span class="en-content hidden">Why Choose Us?</span>
+                </h2>
+            </div>
+
+            <div class="advantages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-language" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">100% Francophone</span>
+                        <span class="en-content hidden">100% French-Speaking</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Toute notre équipe parle parfaitement français. Vous bénéficiez d'un accompagnement dans votre langue maternelle, sans barrière linguistique.</span>
+                        <span class="en-content hidden">Our entire team speaks perfect French. You benefit from support in your native language, without language barriers.</span>
+                    </p>
+                </div>
+
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">Partenaire Agréé</span>
+                        <span class="en-content hidden">Licensed Partner</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Nous sommes agréés par toutes les autorités émiraties. Votre société est créée dans le strict respect de la réglementation locale.</span>
+                        <span class="en-content hidden">We are licensed by all UAE authorities. Your company is created in strict compliance with local regulations.</span>
+                    </p>
+                </div>
+
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-handshake" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">Réseau Exclusif</span>
+                        <span class="en-content hidden">Exclusive Network</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Accès privilégié aux meilleures banques, bureaux et partenaires. Notre réseau facilite toutes vos démarches d'installation.</span>
+                        <span class="en-content hidden">Privileged access to the best banks, offices and partners. Our network facilitates all your setup procedures.</span>
+                    </p>
+                </div>
+
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">Rapidité Garantie</span>
+                        <span class="en-content hidden">Guaranteed Speed</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Processus optimisés pour une création rapide. Votre société peut être opérationnelle en seulement 5 jours avec notre formule Premium.</span>
+                        <span class="en-content hidden">Optimized processes for rapid creation. Your company can be operational in just 5 days with our Premium package.</span>
+                    </p>
+                </div>
+
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-euro-sign" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">Prix Transparents</span>
+                        <span class="en-content hidden">Transparent Pricing</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Aucun frais caché. Nos formules tout inclus couvrent l'ensemble des coûts de création. Vous savez exactement ce que vous payez.</span>
+                        <span class="en-content hidden">No hidden fees. Our all-inclusive packages cover all creation costs. You know exactly what you're paying for.</span>
+                    </p>
+                </div>
+
+                <div class="advantage-card" style="text-align: center; padding: 2rem;">
+                    <div style="width: 80px; height: 80px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                        <i class="fas fa-life-ring" style="font-size: 2rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">Support Continu</span>
+                        <span class="en-content hidden">Ongoing Support</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Notre accompagnement ne s'arrête pas à la création. Nous restons à vos côtés pour le développement de votre entreprise à Dubaï.</span>
+                        <span class="en-content hidden">Our support doesn't stop at creation. We remain by your side for the development of your business in Dubai.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Testimonials -->
+    <section class="detailed-testimonials" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Témoignages Détaillés</span>
+                    <span class="en-content hidden">Detailed Testimonials</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="fr-content">Découvrez les success stories de nos clients</span>
+                    <span class="en-content hidden">Discover our clients' success stories</span>
+                </p>
+            </div>
+
+            <div class="testimonial-carousel" style="margin-top: 3rem;">
+                <div class="testimonial-detailed" style="background: white; padding: 3rem; border-radius: 10px; box-shadow: var(--shadow-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+                        <img src="Image/handshake-clean-dubai.png.png" alt="Success Story" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 2rem; object-fit: cover;">
+                        <div>
+                            <h3>Laurent Dubois</h3>
+                            <p style="color: var(--gold); font-weight: 600;">
+                                <span class="fr-content">Fondateur, TechSolutions SARL</span>
+                                <span class="en-content hidden">Founder, TechSolutions SARL</span>
+                            </p>
+                            <p style="color: var(--gray); font-size: 0.875rem;">
+                                <span class="fr-content">Société créée en Janvier 2024</span>
+                                <span class="en-content hidden">Company created in January 2024</span>
+                            </p>
+                        </div>
+                    </div>
+                    <blockquote style="font-size: 1.125rem; line-height: 1.8; color: var(--gray-dark); margin-bottom: 1.5rem;">
+                        <span class="fr-content">
+                            "Après 20 ans d'entrepreneuriat en France, j'ai décidé de m'installer à Dubaï pour développer mon activité de conseil IT à l'international. L'équipe de DubaiBusiness m'a accompagné de A à Z avec un professionnalisme exemplaire. En seulement 7 jours, ma société était créée et mon compte bancaire ouvert. Le plus impressionnant? L'économie fiscale réalisée me permet de réinvestir massivement dans ma croissance. Aujourd'hui, je facture des clients dans 15 pays différents et j'ai embauché 5 collaborateurs. Un vrai game changer!"
+                        </span>
+                        <span class="en-content hidden">
+                            "After 20 years of entrepreneurship in France, I decided to move to Dubai to develop my IT consulting business internationally. The DubaiBusiness team supported me from A to Z with exemplary professionalism. In just 7 days, my company was created and my bank account opened. The most impressive part? The tax savings achieved allow me to massively reinvest in my growth. Today, I invoice clients in 15 different countries and have hired 5 employees. A real game changer!"
+                        </span>
+                    </blockquote>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Économie fiscale annuelle</span>
+                                <span class="en-content hidden">Annual tax savings</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">€85,000+</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Croissance CA</span>
+                                <span class="en-content hidden">Revenue growth</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">+240%</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Nouveaux clients</span>
+                                <span class="en-content hidden">New clients</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">45</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-detailed" style="background: white; padding: 3rem; border-radius: 10px; box-shadow: var(--shadow-lg); margin-bottom: 2rem;">
+                    <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+                        <img src="Image/formation-clean-dubai.png.png" alt="Success Story" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 2rem; object-fit: cover;">
+                        <div>
+                            <h3>Sophie Martinez</h3>
+                            <p style="color: var(--gold); font-weight: 600;">
+                                <span class="fr-content">CEO, Digital Academy FZ-LLC</span>
+                                <span class="en-content hidden">CEO, Digital Academy FZ-LLC</span>
+                            </p>
+                            <p style="color: var(--gray); font-size: 0.875rem;">
+                                <span class="fr-content">Société créée en Mars 2023</span>
+                                <span class="en-content hidden">Company created in March 2023</span>
+                            </p>
+                        </div>
+                    </div>
+                    <blockquote style="font-size: 1.125rem; line-height: 1.8; color: var(--gray-dark); margin-bottom: 1.5rem;">
+                        <span class="fr-content">
+                            "En tant que formatrice en ligne, je cherchais une solution pour optimiser ma situation fiscale tout en développant mon activité à l'international. DubaiBusiness a dépassé toutes mes attentes! Non seulement ils ont géré toute la création de ma société en zone franche, mais ils m'ont aussi conseillée sur la meilleure structure pour mon business model. Le support en français a été crucial pour comprendre toutes les subtilités. Résultat: j'ai pu lancer ma plateforme de formation, embaucher une équipe et je vis maintenant à Dubaï avec ma famille. Un rêve devenu réalité!"
+                        </span>
+                        <span class="en-content hidden">
+                            "As an online trainer, I was looking for a solution to optimize my tax situation while developing my business internationally. DubaiBusiness exceeded all my expectations! Not only did they handle all the creation of my free zone company, but they also advised me on the best structure for my business model. French support was crucial to understanding all the subtleties. Result: I was able to launch my training platform, hire a team and I now live in Dubai with my family. A dream come true!"
+                        </span>
+                    </blockquote>
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid var(--gray-light);">
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Étudiants formés</span>
+                                <span class="en-content hidden">Students trained</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">15,000+</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Pays couverts</span>
+                                <span class="en-content hidden">Countries covered</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">42</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: 600; color: var(--primary-blue);">
+                                <span class="fr-content">Équipe</span>
+                                <span class="en-content hidden">Team</span>
+                            </p>
+                            <p style="font-size: 1.5rem; font-weight: 800; color: var(--gold);">12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <span class="fr-content">Écrivez votre success story</span>
+                    <span class="en-content hidden">Write your success story</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Certifications -->
+    <section class="partners-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Nos Partenaires & Certifications</span>
+                    <span class="en-content hidden">Our Partners & Certifications</span>
+                </h2>
+            </div>
+
+            <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 3rem; align-items: center; justify-items: center; margin-top: 3rem;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=DET" alt="Dubai Economic Department" style="opacity: 0.8; transition: opacity 0.3s;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=DMCC" alt="DMCC" style="opacity: 0.8; transition: opacity 0.3s;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=IFZA" alt="IFZA" style="opacity: 0.8; transition: opacity 0.3s;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=JAFZA" alt="JAFZA" style="opacity: 0.8; transition: opacity 0.3s;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=ISO+9001" alt="ISO 9001" style="opacity: 0.8; transition: opacity 0.3s;">
+                <img src="https://via.placeholder.com/150x80/fff/003366?text=Emirates+NBD" alt="Emirates NBD" style="opacity: 0.8; transition: opacity 0.3s;">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>
+                    <span class="fr-content">Rejoignez la communauté des entrepreneurs qui ont choisi le succès</span>
+                    <span class="en-content hidden">Join the community of entrepreneurs who have chosen success</span>
+                </h2>
+                <p>
+                    <span class="fr-content">Votre nouvelle vie d'entrepreneur libre commence ici</span>
+                    <span class="en-content hidden">Your new life as a free entrepreneur starts here</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span class="fr-content">Démarrer mon projet</span>
+                        <span class="en-content hidden">Start my project</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="formules.html" class="btn btn-secondary btn-lg">
+                        <span class="fr-content">Voir nos formules</span>
+                        <span class="en-content hidden">See our packages</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dubai<span class="gold">Business</span></h3>
+                    <p>
+                        <span class="fr-content">Votre partenaire de confiance pour créer votre société à Dubaï</span>
+                        <span class="en-content hidden">Your trusted partner for company setup in Dubai</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Navigation</span>
+                        <span class="en-content hidden">Navigation</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="fr-content">Accueil</span>
+                            <span class="en-content hidden">Home</span>
+                        </a></li>
+                        <li><a href="formules.html">
+                            <span class="fr-content">Nos Formules</span>
+                            <span class="en-content hidden">Our Packages</span>
+                        </a></li>
+                        <li><a href="apropos.html">
+                            <span class="fr-content">À Propos</span>
+                            <span class="en-content hidden">About</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <span class="fr-content">Contact</span>
+                            <span class="en-content hidden">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Contact</span>
+                        <span class="en-content hidden">Contact</span>
+                    </h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Business Bay, Dubai, UAE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+971 50 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@dubaibusiness.ae</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Certifications</span>
+                        <span class="en-content hidden">Certifications</span>
+                    </h4>
+                    <div class="certifications">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=ISO" alt="ISO">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=DET" alt="DET">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DubaiBusiness. 
+                    <span class="fr-content">Tous droits réservés.</span>
+                    <span class="en-content hidden">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Team member hover effect
+        document.querySelectorAll('.team-member').forEach(member => {
+            member.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            member.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Partner logos hover effect
+        document.querySelectorAll('.partners-grid img').forEach(logo => {
+            logo.addEventListener('mouseenter', function() {
+                this.style.opacity = '1';
+            });
+            logo.addEventListener('mouseleave', function() {
+                this.style.opacity = '0.8';
+            });
+        });
+    </script>
+</body>
+</html> 

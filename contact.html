@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dubai Business Setup | Devis gratuit création société Dubaï</title>
+    <meta name="description" content="Contactez nos experts francophones pour créer votre société à Dubaï. Devis gratuit sous 24h. Consultation personnalisée. Formulaire sécurisé.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for form */
+        .form-step {
+            display: none;
+            animation: slideIn 0.3s ease-out;
+        }
+        .form-step.active {
+            display: block;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gray-light);
+            z-index: -1;
+        }
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--gray);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .step.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--primary-blue);
+        }
+        .step.completed {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: white;
+        }
+        .form-control.error {
+            border-color: #dc3545;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+        .form-control.error + .error-message {
+            display: block;
+        }
+        .calendar-wrapper {
+            background: var(--off-white);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .time-slot {
+            padding: 0.5rem;
+            text-align: center;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .time-slot:hover {
+            border-color: var(--gold);
+            background: var(--gold);
+            color: var(--primary-blue);
+        }
+        .time-slot.selected {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--primary-blue);
+        }
+        .time-slot.unavailable {
+            background: var(--gray-light);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2>Dubai<span class="gold">Business</span></h2>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="formules.html" class="nav-link">Nos Formules</a></li>
+                    <li><a href="apropos.html" class="nav-link">À Propos</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn" onclick="switchLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">FR</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="margin-top: 70px; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 4rem 0; color: white;">
+        <div class="container">
+            <h1 class="text-center" style="color: white;">
+                <span class="fr-content">Contactez Nos Experts</span>
+                <span class="en-content hidden">Contact Our Experts</span>
+            </h1>
+            <p class="text-center" style="font-size: 1.25rem; margin-top: 1rem; opacity: 0.9;">
+                <span class="fr-content">Obtenez un devis personnalisé en moins de 24h</span>
+                <span class="en-content hidden">Get a personalized quote in less than 24 hours</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options" style="padding: 3rem 0; background: var(--off-white);">
+        <div class="container">
+            <div class="options-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="contact-option" style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: var(--shadow-md);">
+                    <i class="fas fa-phone-alt" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h3>
+                        <span class="fr-content">Appelez-nous</span>
+                        <span class="en-content hidden">Call Us</span>
+                    </h3>
+                    <p style="font-size: 1.25rem; font-weight: 600; color: var(--primary-blue); margin: 1rem 0;">+971 50 123 4567</p>
+                    <p>
+                        <span class="fr-content">Lundi - Dimanche<br>9h00 - 20h00 (Heure Dubai)</span>
+                        <span class="en-content hidden">Monday - Sunday<br>9:00 AM - 8:00 PM (Dubai Time)</span>
+                    </p>
+                </div>
+                <div class="contact-option" style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: var(--shadow-md);">
+                    <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 1rem;"></i>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/971501234567" class="btn btn-primary" style="margin-top: 1rem;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="fr-content">Discuter maintenant</span>
+                        <span class="en-content hidden">Chat now</span>
+                    </a>
+                    <p style="margin-top: 1rem;">
+                        <span class="fr-content">Réponse instantanée</span>
+                        <span class="en-content hidden">Instant response</span>
+                    </p>
+                </div>
+                <div class="contact-option" style="background: white; padding: 2rem; border-radius: 10px; text-align: center; box-shadow: var(--shadow-md);">
+                    <i class="fas fa-envelope" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h3>Email</h3>
+                    <p style="font-weight: 600; color: var(--primary-blue); margin: 1rem 0;">contact@dubaibusiness.ae</p>
+                    <p>
+                        <span class="fr-content">Réponse sous 24h</span>
+                        <span class="en-content hidden">Response within 24h</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="contact-main" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>
+                        <span class="fr-content">Demande de Devis Gratuit</span>
+                        <span class="en-content hidden">Free Quote Request</span>
+                    </h2>
+                    <p style="margin-bottom: 2rem; color: var(--gray);">
+                        <span class="fr-content">Remplissez ce formulaire et recevez votre devis personnalisé sous 24h</span>
+                        <span class="en-content hidden">Fill out this form and receive your personalized quote within 24 hours</span>
+                    </p>
+
+                    <!-- Step Indicator -->
+                    <div class="step-indicator">
+                        <div class="step active" data-step="1">1</div>
+                        <div class="step" data-step="2">2</div>
+                        <div class="step" data-step="3">3</div>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <h3 style="margin-bottom: 1.5rem;">
+                                <span class="fr-content">Informations personnelles</span>
+                                <span class="en-content hidden">Personal Information</span>
+                            </h3>
+                            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label" for="firstName">
+                                        <span class="fr-content">Prénom *</span>
+                                        <span class="en-content hidden">First Name *</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    <span class="error-message">
+                                        <span class="fr-content">Ce champ est requis</span>
+                                        <span class="en-content hidden">This field is required</span>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="lastName">
+                                        <span class="fr-content">Nom *</span>
+                                        <span class="en-content hidden">Last Name *</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    <span class="error-message">
+                                        <span class="fr-content">Ce champ est requis</span>
+                                        <span class="en-content hidden">This field is required</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    <span class="fr-content">Email *</span>
+                                    <span class="en-content hidden">Email *</span>
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <span class="error-message">
+                                    <span class="fr-content">Email invalide</span>
+                                    <span class="en-content hidden">Invalid email</span>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">
+                                    <span class="fr-content">Téléphone *</span>
+                                    <span class="en-content hidden">Phone *</span>
+                                </label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                                <span class="error-message">
+                                    <span class="fr-content">Ce champ est requis</span>
+                                    <span class="en-content hidden">This field is required</span>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="nationality">
+                                    <span class="fr-content">Nationalité</span>
+                                    <span class="en-content hidden">Nationality</span>
+                                </label>
+                                <select class="form-control" id="nationality" name="nationality">
+                                    <option value="">
+                                        <span class="fr-content">Sélectionner</span>
+                                        <span class="en-content hidden">Select</span>
+                                    </option>
+                                    <option value="FR">France</option>
+                                    <option value="BE">Belgique / Belgium</option>
+                                    <option value="CH">Suisse / Switzerland</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="MA">Maroc / Morocco</option>
+                                    <option value="TN">Tunisie / Tunisia</option>
+                                    <option value="DZ">Algérie / Algeria</option>
+                                    <option value="other">
+                                        <span class="fr-content">Autre</span>
+                                        <span class="en-content hidden">Other</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                <span class="fr-content">Suivant</span>
+                                <span class="en-content hidden">Next</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Step 2: Business Information -->
+                        <div class="form-step" data-step="2">
+                            <h3 style="margin-bottom: 1.5rem;">
+                                <span class="fr-content">Informations sur votre projet</span>
+                                <span class="en-content hidden">Project Information</span>
+                            </h3>
+                            <div class="form-group">
+                                <label class="form-label" for="businessType">
+                                    <span class="fr-content">Type d'activité *</span>
+                                    <span class="en-content hidden">Business Type *</span>
+                                </label>
+                                <select class="form-control" id="businessType" name="businessType" required>
+                                    <option value="">
+                                        <span class="fr-content">Sélectionner</span>
+                                        <span class="en-content hidden">Select</span>
+                                    </option>
+                                    <option value="consulting">
+                                        <span class="fr-content">Conseil / Consulting</span>
+                                        <span class="en-content hidden">Consulting</span>
+                                    </option>
+                                    <option value="ecommerce">E-commerce</option>
+                                    <option value="trading">Trading</option>
+                                    <option value="it">
+                                        <span class="fr-content">IT / Technologies</span>
+                                        <span class="en-content hidden">IT / Technology</span>
+                                    </option>
+                                    <option value="services">Services</option>
+                                    <option value="real-estate">
+                                        <span class="fr-content">Immobilier</span>
+                                        <span class="en-content hidden">Real Estate</span>
+                                    </option>
+                                    <option value="other">
+                                        <span class="fr-content">Autre</span>
+                                        <span class="en-content hidden">Other</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="package">
+                                    <span class="fr-content">Formule souhaitée</span>
+                                    <span class="en-content hidden">Preferred Package</span>
+                                </label>
+                                <select class="form-control" id="package" name="package">
+                                    <option value="">
+                                        <span class="fr-content">Je ne sais pas encore</span>
+                                        <span class="en-content hidden">I don't know yet</span>
+                                    </option>
+                                    <option value="classic">
+                                        <span class="fr-content">Formule Classique (6,470€)</span>
+                                        <span class="en-content hidden">Classic Package (€6,470)</span>
+                                    </option>
+                                    <option value="premium">
+                                        <span class="fr-content">Formule Premium (8,540€)</span>
+                                        <span class="en-content hidden">Premium Package (€8,540)</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="timeline">
+                                    <span class="fr-content">Quand souhaitez-vous créer votre société?</span>
+                                    <span class="en-content hidden">When do you want to create your company?</span>
+                                </label>
+                                <select class="form-control" id="timeline" name="timeline">
+                                    <option value="asap">
+                                        <span class="fr-content">Dès que possible</span>
+                                        <span class="en-content hidden">As soon as possible</span>
+                                    </option>
+                                    <option value="1month">
+                                        <span class="fr-content">Dans le mois</span>
+                                        <span class="en-content hidden">Within a month</span>
+                                    </option>
+                                    <option value="3months">
+                                        <span class="fr-content">Dans 3 mois</span>
+                                        <span class="en-content hidden">Within 3 months</span>
+                                    </option>
+                                    <option value="6months">
+                                        <span class="fr-content">Dans 6 mois</span>
+                                        <span class="en-content hidden">Within 6 months</span>
+                                    </option>
+                                    <option value="info">
+                                        <span class="fr-content">Je recherche des informations</span>
+                                        <span class="en-content hidden">I'm looking for information</span>
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">
+                                    <span class="fr-content">Message (optionnel)</span>
+                                    <span class="en-content hidden">Message (optional)</span>
+                                </label>
+                                <textarea class="form-control" id="message" name="message" rows="4" style="resize: vertical;"></textarea>
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <button type="button" class="btn btn-outline" onclick="previousStep()">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <span class="fr-content">Précédent</span>
+                                    <span class="en-content hidden">Previous</span>
+                                </button>
+                                <button type="button" class="btn btn-primary" onclick="nextStep()">
+                                    <span class="fr-content">Suivant</span>
+                                    <span class="en-content hidden">Next</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Schedule Consultation -->
+                        <div class="form-step" data-step="3">
+                            <h3 style="margin-bottom: 1.5rem;">
+                                <span class="fr-content">Planifier une consultation</span>
+                                <span class="en-content hidden">Schedule a Consultation</span>
+                            </h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--gray);">
+                                <span class="fr-content">Choisissez un créneau pour une consultation gratuite de 30 minutes avec un de nos experts</span>
+                                <span class="en-content hidden">Choose a slot for a free 30-minute consultation with one of our experts</span>
+                            </p>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="consultationDate">
+                                    <span class="fr-content">Date préférée</span>
+                                    <span class="en-content hidden">Preferred Date</span>
+                                </label>
+                                <input type="date" class="form-control" id="consultationDate" name="consultationDate" min="">
+                            </div>
+
+                            <div class="calendar-wrapper">
+                                <h4 style="margin-bottom: 1rem;">
+                                    <span class="fr-content">Créneaux disponibles</span>
+                                    <span class="en-content hidden">Available Slots</span>
+                                </h4>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-time="09:00">09:00</div>
+                                    <div class="time-slot" data-time="10:00">10:00</div>
+                                    <div class="time-slot" data-time="11:00">11:00</div>
+                                    <div class="time-slot unavailable" data-time="12:00">12:00</div>
+                                    <div class="time-slot" data-time="14:00">14:00</div>
+                                    <div class="time-slot" data-time="15:00">15:00</div>
+                                    <div class="time-slot" data-time="16:00">16:00</div>
+                                    <div class="time-slot" data-time="17:00">17:00</div>
+                                </div>
+                                <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--gray);">
+                                    <span class="fr-content">Heure de Dubaï (UTC+4)</span>
+                                    <span class="en-content hidden">Dubai Time (UTC+4)</span>
+                                </p>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 2rem;">
+                                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <span class="fr-content">J'accepte les conditions générales et la politique de confidentialité *</span>
+                                    <span class="en-content hidden">I accept the terms and conditions and privacy policy *</span>
+                                </label>
+                            </div>
+
+                            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                                <button type="button" class="btn btn-outline" onclick="previousStep()">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <span class="fr-content">Précédent</span>
+                                    <span class="en-content hidden">Previous</span>
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="fr-content">Envoyer ma demande</span>
+                                    <span class="en-content hidden">Send my request</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information & Map -->
+                <div class="contact-info-wrapper">
+                    <h2>
+                        <span class="fr-content">Nos Bureaux</span>
+                        <span class="en-content hidden">Our Offices</span>
+                    </h2>
+                    
+                    <div class="office-info" style="background: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;">
+                            <span class="fr-content">Bureau Principal - Dubaï</span>
+                            <span class="en-content hidden">Main Office - Dubai</span>
+                        </h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--gold); width: 20px;"></i>
+                                <span>Business Bay Tower, Floor 21<br>Sheikh Zayed Road<br>Dubai, UAE</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <i class="fas fa-phone" style="color: var(--gold); width: 20px;"></i>
+                                <span>+971 50 123 4567</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <i class="fas fa-envelope" style="color: var(--gold); width: 20px;"></i>
+                                <span>contact@dubaibusiness.ae</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 1rem;">
+                                <i class="fas fa-clock" style="color: var(--gold); width: 20px;"></i>
+                                <span>
+                                    <span class="fr-content">Lun - Dim: 9h00 - 20h00</span>
+                                    <span class="en-content hidden">Mon - Sun: 9:00 AM - 8:00 PM</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="map-container" style="border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-md);">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.1786120139867!2d55.2592881!3d25.1972018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0x6df53280f1d7e92a!2sBusiness%20Bay%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1234567890" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <!-- Quick Tips -->
+                    <div class="quick-tips" style="background: var(--off-white); padding: 2rem; border-radius: 10px; margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">
+                            <i class="fas fa-lightbulb" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                            <span class="fr-content">Bon à savoir</span>
+                            <span class="en-content hidden">Good to know</span>
+                        </h3>
+                        <ul style="padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="fr-content">Consultation gratuite de 30 minutes incluse</span>
+                                <span class="en-content hidden">Free 30-minute consultation included</span>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="fr-content">Devis détaillé envoyé sous 24h</span>
+                                <span class="en-content hidden">Detailed quote sent within 24 hours</span>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <span class="fr-content">Équipe 100% francophone</span>
+                                <span class="en-content hidden">100% French-speaking team</span>
+                            </li>
+                            <li>
+                                <span class="fr-content">Paiement sécurisé par virement ou carte</span>
+                                <span class="en-content hidden">Secure payment by transfer or card</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Quick Section -->
+    <section class="contact-faq" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <h2 class="section-title text-center">
+                <span class="fr-content">Questions Fréquentes Contact</span>
+                <span class="en-content hidden">Contact FAQ</span>
+            </h2>
+            <div class="faq-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 3rem auto 0;">
+                <div class="faq-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">Quand serai-je contacté?</span>
+                        <span class="en-content hidden">When will I be contacted?</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Nous vous contactons dans les 2 heures ouvrées suivant votre demande. Pour une réponse immédiate, utilisez WhatsApp.</span>
+                        <span class="en-content hidden">We contact you within 2 business hours of your request. For an immediate response, use WhatsApp.</span>
+                    </p>
+                </div>
+                <div class="faq-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">La consultation est-elle payante?</span>
+                        <span class="en-content hidden">Is the consultation paid?</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Non, la première consultation de 30 minutes est entièrement gratuite et sans engagement.</span>
+                        <span class="en-content hidden">No, the first 30-minute consultation is completely free and without obligation.</span>
+                    </p>
+                </div>
+                <div class="faq-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-sm);">
+                    <h4 style="margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 0.5rem;"></i>
+                        <span class="fr-content">Puis-je modifier mon RDV?</span>
+                        <span class="en-content hidden">Can I change my appointment?</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Oui, vous pouvez modifier ou annuler votre rendez-vous jusqu'à 24h avant l'heure prévue.</span>
+                        <span class="en-content hidden">Yes, you can modify or cancel your appointment up to 24 hours before the scheduled time.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dubai<span class="gold">Business</span></h3>
+                    <p>
+                        <span class="fr-content">Votre partenaire de confiance pour créer votre société à Dubaï</span>
+                        <span class="en-content hidden">Your trusted partner for company setup in Dubai</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Navigation</span>
+                        <span class="en-content hidden">Navigation</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="fr-content">Accueil</span>
+                            <span class="en-content hidden">Home</span>
+                        </a></li>
+                        <li><a href="formules.html">
+                            <span class="fr-content">Nos Formules</span>
+                            <span class="en-content hidden">Our Packages</span>
+                        </a></li>
+                        <li><a href="apropos.html">
+                            <span class="fr-content">À Propos</span>
+                            <span class="en-content hidden">About</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <span class="fr-content">Contact</span>
+                            <span class="en-content hidden">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Contact</span>
+                        <span class="en-content hidden">Contact</span>
+                    </h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Business Bay, Dubai, UAE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+971 50 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@dubaibusiness.ae</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Certifications</span>
+                        <span class="en-content hidden">Certifications</span>
+                    </h4>
+                    <div class="certifications">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=ISO" alt="ISO">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=DET" alt="DET">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DubaiBusiness. 
+                    <span class="fr-content">Tous droits réservés.</span>
+                    <span class="en-content hidden">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Form Steps Management
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        function showStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.form-step').forEach(s => {
+                s.classList.remove('active');
+            });
+            
+            // Show current step
+            document.querySelector(`.form-step[data-step="${step}"]`).classList.add('active');
+            
+            // Update step indicators
+            document.querySelectorAll('.step').forEach((indicator, index) => {
+                if (index + 1 < step) {
+                    indicator.classList.add('completed');
+                    indicator.classList.remove('active');
+                } else if (index + 1 === step) {
+                    indicator.classList.add('active');
+                    indicator.classList.remove('completed');
+                } else {
+                    indicator.classList.remove('active', 'completed');
+                }
+            });
+        }
+
+        function nextStep() {
+            if (validateCurrentStep()) {
+                if (currentStep < totalSteps) {
+                    currentStep++;
+                    showStep(currentStep);
+                }
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+
+        function validateCurrentStep() {
+            const currentFormStep = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+            const requiredFields = currentFormStep.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.classList.add('error');
+                    isValid = false;
+                } else {
+                    field.classList.remove('error');
+                }
+                
+                // Email validation
+                if (field.type === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(field.value)) {
+                        field.classList.add('error');
+                        isValid = false;
+                    }
+                }
+            });
+            
+            return isValid;
+        }
+
+        // Set minimum date to today
+        document.getElementById('consultationDate').min = new Date().toISOString().split('T')[0];
+
+        // Time slot selection
+        document.querySelectorAll('.time-slot:not(.unavailable)').forEach(slot => {
+            slot.addEventListener('click', function() {
+                // Remove previous selection
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                // Add selection to clicked slot
+                this.classList.add('selected');
+            });
+        });
+
+        // Form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            if (validateCurrentStep()) {
+                // Show loading state
+                const submitBtn = event.target.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Show success message
+                    alert(currentLanguage === 'fr' 
+                        ? 'Merci! Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais.' 
+                        : 'Thank you! Your request has been sent successfully. We will contact you as soon as possible.');
+                    
+                    // Reset form
+                    document.getElementById('contact-form').reset();
+                    currentStep = 1;
+                    showStep(currentStep);
+                }, 2000);
+            }
+        }
+
+        // Remove error class on input
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('input', function() {
+                this.classList.remove('error');
+            });
+        });
+
+        // Step indicator click navigation
+        document.querySelectorAll('.step').forEach((indicator, index) => {
+            indicator.addEventListener('click', function() {
+                const targetStep = index + 1;
+                // Only allow going to previous steps or current step
+                if (targetStep <= currentStep) {
+                    currentStep = targetStep;
+                    showStep(currentStep);
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Formules - Création société Dubaï | Classique & Premium</title>
+    <meta name="description" content="Découvrez nos formules tout inclus pour créer votre société à Dubaï. Formule Classique 6470€ ou Premium 8540€. Zéro impôt, accompagnement expert francophone.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h2>Dubai<span class="gold">Business</span></h2>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="formules.html" class="nav-link active">Nos Formules</a></li>
+                    <li><a href="apropos.html" class="nav-link">À Propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="lang-switch">
+                        <button class="lang-btn" onclick="switchLanguage()">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-lang">FR</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="margin-top: 70px; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 4rem 0; color: white;">
+        <div class="container">
+            <h1 class="text-center" style="color: white;">
+                <span class="fr-content">0% d'Impôt, 100% Propriétaire</span>
+                <span class="en-content hidden">0% Tax, 100% Ownership</span>
+            </h1>
+            <p class="text-center" style="font-size: 1.25rem; margin-top: 1rem; opacity: 0.9;">
+                <span class="fr-content">Deux formules tout inclus pour bâtir votre empire à Dubaï. Prix transparents, aucun frais caché.</span>
+                <span class="en-content hidden">Two all-inclusive packages to build your Dubai legacy. Transparent pricing, no hidden fees.</span>
+            </p>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="#packages" class="btn btn-secondary btn-large" style="background: white; color: var(--primary-blue); border: none;">
+                    <span class="fr-content">Découvrir les Formules</span>
+                    <span class="en-content hidden">Discover Our Packages</span>
+                    <i class="fas fa-arrow-down" style="margin-left: 0.5rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Comparison -->
+    <section class="packages-comparison" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <!-- Features Column -->
+                <div class="features-column">
+                    <div style="height: 150px;"></div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Création société</span>
+                            <span class="en-content hidden">Company creation</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Délai de traitement</span>
+                            <span class="en-content hidden">Processing time</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Visa investisseur</span>
+                            <span class="en-content hidden">Investor visa</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Bureau virtuel</span>
+                            <span class="en-content hidden">Virtual office</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Assistance bancaire</span>
+                            <span class="en-content hidden">Banking assistance</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Conseiller fiscal</span>
+                            <span class="en-content hidden">Tax advisor</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Visas famille</span>
+                            <span class="en-content hidden">Family visas</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light);">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Support prioritaire</span>
+                            <span class="en-content hidden">Priority support</span>
+                        </h4>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem;">
+                        <h4 style="color: var(--gray-dark);">
+                            <span class="fr-content">Compte bancaire VIP</span>
+                            <span class="en-content hidden">VIP bank account</span>
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- Classic Package Column -->
+                <div class="package-column" style="background: white; border-radius: 10px; box-shadow: var(--shadow-lg); overflow: hidden;">
+                    <div class="package-header" style="background: var(--primary-blue); color: white; padding: 2rem; text-align: center;">
+                        <h3 style="color: white; margin-bottom: 1rem;">
+                            <span class="fr-content">Formule Classique</span>
+                            <span class="en-content hidden">Classic Package</span>
+                        </h3>
+                        <div class="package-price">
+                            <span class="currency" style="font-size: 1.5rem;">€</span>
+                            <span class="amount" style="font-size: 3rem; font-weight: 800; color: white;">6,470</span>
+                        </div>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <span class="fr-content">10 jours</span>
+                        <span class="en-content hidden">10 days</span>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-times" style="color: var(--gray-light);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-times" style="color: var(--gray-light);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-times" style="color: var(--gray-light);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; text-align: center;">
+                        <i class="fas fa-times" style="color: var(--gray-light);"></i>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <span class="fr-content">Choisir Classique</span>
+                            <span class="en-content hidden">Choose Classic</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Package Column -->
+                <div class="package-column" style="background: white; border-radius: 10px; box-shadow: var(--shadow-xl); overflow: hidden; border: 2px solid var(--gold); transform: scale(1.05);">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--primary-blue); padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.875rem;">
+                        <span class="fr-content">Recommandé</span>
+                        <span class="en-content hidden">Recommended</span>
+                    </div>
+                    <div class="package-header" style="background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); color: var(--primary-blue); padding: 2rem; text-align: center;">
+                        <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                            <span class="fr-content">Formule Premium</span>
+                            <span class="en-content hidden">Premium Package</span>
+                        </h3>
+                        <div class="package-price">
+                            <span class="currency" style="font-size: 1.5rem;">€</span>
+                            <span class="amount" style="font-size: 3rem; font-weight: 800; color: var(--primary-blue);">8,540</span>
+                        </div>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <span class="fr-content">5 jours</span>
+                        <span class="en-content hidden">5 days</span>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                        <span style="color: var(--gold); font-size: 0.875rem;">
+                            <span class="fr-content">(Premium)</span>
+                            <span class="en-content hidden">(Premium)</span>
+                        </span>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                        <span style="color: var(--gold); font-size: 0.875rem;">
+                            <span class="fr-content">(VIP)</span>
+                            <span class="en-content hidden">(VIP)</span>
+                        </span>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; border-bottom: 1px solid var(--gray-light); text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div class="feature-row" style="padding: 1rem; text-align: center;">
+                        <i class="fas fa-check" style="color: var(--gold);"></i>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <span class="fr-content">Choisir Premium</span>
+                            <span class="en-content hidden">Choose Premium</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Comparison -->
+            <div class="mobile-comparison" style="display: none;">
+                <!-- Mobile version will be handled by CSS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Process -->
+    <section class="detailed-process" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Notre processus en détail</span>
+                    <span class="en-content hidden">Our detailed process</span>
+                </h2>
+                <p class="section-subtitle">
+                    <span class="fr-content">De la consultation initiale à votre première facture</span>
+                    <span class="en-content hidden">From initial consultation to your first invoice</span>
+                </p>
+            </div>
+
+            <div class="process-detail-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-comments" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">1. Consultation gratuite</span>
+                        <span class="en-content hidden">1. Free consultation</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Analyse approfondie de votre projet et de vos besoins spécifiques. Recommandation personnalisée de la juridiction et du type de licence adaptés.</span>
+                        <span class="en-content hidden">In-depth analysis of your project and specific needs. Personalized recommendation of the appropriate jurisdiction and license type.</span>
+                    </p>
+                </div>
+
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-file-alt" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">2. Préparation documents</span>
+                        <span class="en-content hidden">2. Document preparation</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Collecte et préparation de tous les documents nécessaires. Traduction certifiée et légalisation selon les exigences des autorités.</span>
+                        <span class="en-content hidden">Collection and preparation of all necessary documents. Certified translation and legalization according to authority requirements.</span>
+                    </p>
+                </div>
+
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-building" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">3. Création société</span>
+                        <span class="en-content hidden">3. Company creation</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Dépôt du dossier, obtention de la licence commerciale et enregistrement auprès des autorités. Mise en place de la structure juridique.</span>
+                        <span class="en-content hidden">File submission, commercial license obtainment and registration with authorities. Legal structure establishment.</span>
+                    </p>
+                </div>
+
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-id-card" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">4. Visa & Emirates ID</span>
+                        <span class="en-content hidden">4. Visa & Emirates ID</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Traitement de votre visa investisseur et de votre Emirates ID. Accompagnement pour les examens médicaux et biométriques.</span>
+                        <span class="en-content hidden">Processing of your investor visa and Emirates ID. Support for medical and biometric examinations.</span>
+                    </p>
+                </div>
+
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-university" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">5. Compte bancaire</span>
+                        <span class="en-content hidden">5. Bank account</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Introduction auprès des meilleures banques. Préparation du business plan et accompagnement aux rendez-vous bancaires.</span>
+                        <span class="en-content hidden">Introduction to the best banks. Business plan preparation and support during bank appointments.</span>
+                    </p>
+                </div>
+
+                <div class="process-detail-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                    <div class="process-icon" style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-rocket" style="font-size: 1.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <h3>
+                        <span class="fr-content">6. Lancement activité</span>
+                        <span class="en-content hidden">6. Business launch</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Formation sur vos obligations légales et fiscales. Mise en place des outils de facturation et support continu.</span>
+                        <span class="en-content hidden">Training on your legal and tax obligations. Implementation of invoicing tools and ongoing support.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Ce qui est inclus dans nos formules</span>
+                    <span class="en-content hidden">What's included in our packages</span>
+                </h2>
+            </div>
+
+            <div class="included-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-certificate" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">Licence commerciale</span>
+                        <span class="en-content hidden">Trade license</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Tous les frais gouvernementaux inclus</span>
+                        <span class="en-content hidden">All government fees included</span>
+                    </p>
+                </div>
+
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-file-contract" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">Statuts société</span>
+                        <span class="en-content hidden">Company bylaws</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Rédaction et enregistrement</span>
+                        <span class="en-content hidden">Drafting and registration</span>
+                    </p>
+                </div>
+
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-passport" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">Visa investisseur</span>
+                        <span class="en-content hidden">Investor visa</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">2 ans renouvelables</span>
+                        <span class="en-content hidden">2 years renewable</span>
+                    </p>
+                </div>
+
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">Bureau virtuel</span>
+                        <span class="en-content hidden">Virtual office</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Adresse prestigieuse à Dubaï</span>
+                        <span class="en-content hidden">Prestigious address in Dubai</span>
+                    </p>
+                </div>
+
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">PRO Services</span>
+                        <span class="en-content hidden">PRO Services</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Gestion administrative complète</span>
+                        <span class="en-content hidden">Complete administrative management</span>
+                    </p>
+                </div>
+
+                <div class="included-item" style="text-align: center;">
+                    <i class="fas fa-headset" style="font-size: 3rem; color: var(--gold); margin-bottom: 1rem;"></i>
+                    <h4>
+                        <span class="fr-content">Support francophone</span>
+                        <span class="en-content hidden">French-speaking support</span>
+                    </h4>
+                    <p>
+                        <span class="fr-content">Assistance 7j/7</span>
+                        <span class="en-content hidden">7/7 assistance</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Benefits Section -->
+    <section class="tax-benefits" style="background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%); padding: 4rem 0; margin-top: 4rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--primary-blue);">
+                    <span class="fr-content">Pourquoi les entrepreneurs francophones choisissent Dubaï</span>
+                    <span class="en-content hidden">Why French-speaking entrepreneurs choose Dubai</span>
+                </h2>
+            </div>
+            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="benefit-card" style="background: white; padding: 2rem; border-radius: 10px; text-align: center;">
+                    <div class="benefit-icon" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue);">
+                        <span class="fr-content">0% d'impôt sur le revenu</span>
+                        <span class="en-content hidden">0% income tax</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Aucun impôt sur vos revenus personnels. Gardez 100% de vos gains, contrairement aux 45% d'imposition en France.</span>
+                        <span class="en-content hidden">No personal income tax. Keep 100% of your earnings, unlike the 45% tax rate in France.</span>
+                    </p>
+                </div>
+                <div class="benefit-card" style="background: white; padding: 2rem; border-radius: 10px; text-align: center;">
+                    <div class="benefit-icon" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue);">
+                        <span class="fr-content">9% d'impôt société max</span>
+                        <span class="en-content hidden">9% corporate tax max</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Seulement 9% d'impôt sur les sociétés au-delà de 375,000 AED de bénéfices. En dessous, c'est 0%.</span>
+                        <span class="en-content hidden">Only 9% corporate tax above 375,000 AED profits. Below that, it's 0%.</span>
+                    </p>
+                </div>
+                <div class="benefit-card" style="background: white; padding: 2rem; border-radius: 10px; text-align: center;">
+                    <div class="benefit-icon" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <h3 style="color: var(--primary-blue);">
+                        <span class="fr-content">Hub international</span>
+                        <span class="en-content hidden">International hub</span>
+                    </h3>
+                    <p>
+                        <span class="fr-content">Position stratégique entre Europe, Asie et Afrique. Plus de 200 nationalités, environnement 100% anglophone.</span>
+                        <span class="en-content hidden">Strategic position between Europe, Asia and Africa. Over 200 nationalities, 100% English-speaking environment.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="cta-wrapper" style="text-align: center; margin-top: 3rem;">
+                <a href="contact.html" class="btn btn-primary btn-large" style="background: var(--primary-blue); border: none;">
+                    <span class="fr-content">Calculez vos économies d'impôts</span>
+                    <span class="en-content hidden">Calculate your tax savings</span>
+                    <i class="fas fa-calculator" style="margin-left: 0.5rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="background: var(--off-white); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="fr-content">Questions fréquentes</span>
+                    <span class="en-content hidden">Frequently asked questions</span>
+                </h2>
+            </div>
+
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: white; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;">
+                        <span class="fr-content">Quelle est la différence entre Freezone et Mainland?</span>
+                        <span class="en-content hidden">What's the difference between Freezone and Mainland?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                        <p>
+                            <span class="fr-content">En Freezone, vous bénéficiez de 100% de propriété étrangère et d'exemptions fiscales, mais vous êtes limité géographiquement. En Mainland, vous pouvez opérer partout aux EAU mais certaines activités nécessitent un sponsor local.</span>
+                            <span class="en-content hidden">In Freezone, you benefit from 100% foreign ownership and tax exemptions, but you are geographically limited. In Mainland, you can operate anywhere in the UAE but some activities require a local sponsor.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: white; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;">
+                        <span class="fr-content">Combien de temps faut-il pour ouvrir un compte bancaire?</span>
+                        <span class="en-content hidden">How long does it take to open a bank account?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                        <p>
+                            <span class="fr-content">Avec notre accompagnement, l'ouverture d'un compte bancaire prend généralement 2 à 4 semaines selon la banque choisie. Notre formule Premium inclut un accès prioritaire aux banques VIP.</span>
+                            <span class="en-content hidden">With our support, opening a bank account typically takes 2 to 4 weeks depending on the chosen bank. Our Premium package includes priority access to VIP banks.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: white; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;">
+                        <span class="fr-content">Puis-je faire venir ma famille à Dubaï?</span>
+                        <span class="en-content hidden">Can I bring my family to Dubai?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                        <p>
+                            <span class="fr-content">Oui, avec un visa investisseur vous pouvez sponsoriser votre conjoint(e) et vos enfants. La formule Premium inclut l'assistance complète pour les visas familiaux.</span>
+                            <span class="en-content hidden">Yes, with an investor visa you can sponsor your spouse and children. The Premium package includes complete assistance for family visas.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm);">
+                    <button class="faq-question" style="width: 100%; padding: 1.5rem; background: white; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;">
+                        <span class="fr-content">Y a-t-il des frais annuels de renouvellement?</span>
+                        <span class="en-content hidden">Are there annual renewal fees?</span>
+                        <i class="fas fa-chevron-down" style="color: var(--gold);"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1.5rem 1.5rem; display: none;">
+                        <p>
+                            <span class="fr-content">Oui, la licence commerciale et le visa doivent être renouvelés annuellement. Les frais varient selon la juridiction mais comptez environ 3000-4000€ par an. Nous offrons des packages de renouvellement avantageux.</span>
+                            <span class="en-content hidden">Yes, the trade license and visa must be renewed annually. Fees vary by jurisdiction but expect around €3000-4000 per year. We offer advantageous renewal packages.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>
+                    <span class="fr-content">Prêt à choisir votre formule?</span>
+                    <span class="en-content hidden">Ready to choose your package?</span>
+                </h2>
+                <p>
+                    <span class="fr-content">Nos experts sont là pour vous conseiller la meilleure option selon vos besoins</span>
+                    <span class="en-content hidden">Our experts are here to advise you on the best option for your needs</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <span class="fr-content">Demander un devis personnalisé</span>
+                        <span class="en-content hidden">Request a personalized quote</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="tel:+971501234567" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i>
+                        <span class="fr-content">Parler à un conseiller</span>
+                        <span class="en-content hidden">Talk to an advisor</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dubai<span class="gold">Business</span></h3>
+                    <p>
+                        <span class="fr-content">Votre partenaire de confiance pour créer votre société à Dubaï</span>
+                        <span class="en-content hidden">Your trusted partner for company setup in Dubai</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Navigation</span>
+                        <span class="en-content hidden">Navigation</span>
+                    </h4>
+                    <ul>
+                        <li><a href="index.html">
+                            <span class="fr-content">Accueil</span>
+                            <span class="en-content hidden">Home</span>
+                        </a></li>
+                        <li><a href="formules.html">
+                            <span class="fr-content">Nos Formules</span>
+                            <span class="en-content hidden">Our Packages</span>
+                        </a></li>
+                        <li><a href="apropos.html">
+                            <span class="fr-content">À Propos</span>
+                            <span class="en-content hidden">About</span>
+                        </a></li>
+                        <li><a href="contact.html">
+                            <span class="fr-content">Contact</span>
+                            <span class="en-content hidden">Contact</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Contact</span>
+                        <span class="en-content hidden">Contact</span>
+                    </h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Business Bay, Dubai, UAE</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+971 50 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@dubaibusiness.ae</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>
+                        <span class="fr-content">Certifications</span>
+                        <span class="en-content hidden">Certifications</span>
+                    </h4>
+                    <div class="certifications">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=ISO" alt="ISO">
+                        <img src="https://via.placeholder.com/80x40/fff/003366?text=DET" alt="DET">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DubaiBusiness. 
+                    <span class="fr-content">Tous droits réservés.</span>
+                    <span class="en-content hidden">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    // Close all other FAQs
+                    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                    document.querySelectorAll('.faq-question i').forEach(i => i.style.transform = 'rotate(0deg)');
+                    
+                    answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Mobile Comparison View
+        function handleMobileComparison() {
+            const comparisonGrid = document.querySelector('.comparison-grid');
+            const mobileComparison = document.querySelector('.mobile-comparison');
+            
+            if (window.innerWidth <= 768) {
+                comparisonGrid.style.display = 'none';
+                mobileComparison.style.display = 'block';
+                // Here you would create mobile-friendly comparison cards
+            } else {
+                comparisonGrid.style.display = 'grid';
+                mobileComparison.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', handleMobileComparison);
+        handleMobileComparison();
+    </script>
+</body>
+</html> 
