@@ -9,9 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
+    <!-- Animated Background Elements -->
+    <div class="stars-container">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    
+    <!-- Floating Orbs -->
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -41,7 +72,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="accueil">
         <!-- Video Background -->
         <div class="hero-video">
             <video autoplay muted loop playsinline>
@@ -52,11 +83,11 @@
         </div>
         
         <div class="hero-content">
-            <div class="urgency-badge">
+            <div class="urgency-badge scroll-reveal">
                 <span class="fr-content">Offre limitée : -15% jusqu'au 31 janvier</span>
                 <span class="en-content hidden">Limited offer: -15% until January 31</span>
             </div>
-            <h1 class="hero-title animate-fade-in">
+            <h1 class="hero-title scroll-reveal">
                 <span class="fr-content">Créez votre société à Dubaï en 60 minutes.</span>
                 <span class="en-content hidden">Set up your company in Dubai in 60 minutes.</span>
                 <br>
@@ -65,11 +96,11 @@
                     <span class="en-content hidden">0% tax, 100% freedom.</span>
                 </span>
             </h1>
-            <p class="hero-subtitle animate-fade-in-delay">
+            <p class="hero-subtitle scroll-reveal">
                 <span class="fr-content">Rejoignez des milliers d'entrepreneurs francophones qui ont choisi la liberté fiscale et les opportunités infinies de Dubaï. Société opérationnelle en 10 jours, visa inclus.</span>
                 <span class="en-content hidden">Join thousands of French-speaking entrepreneurs who have chosen tax freedom and endless opportunities in Dubai. Operational company within 10 days, visa included.</span>
             </p>
-            <div class="hero-cta animate-fade-in-delay-2">
+            <div class="hero-cta scroll-reveal">
                 <a href="contact.html" class="btn btn-primary btn-large">
                     <span class="fr-content">Libérez-vous de l'impôt. Lancez-vous maintenant.</span>
                     <span class="en-content hidden">Free yourself from taxes. Start now.</span>
@@ -80,9 +111,9 @@
                     <span class="en-content hidden">Discover Our Packages</span>
                 </a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats scroll-reveal">
                 <div class="stat">
-                    <div class="stat-number">90,000+</div>
+                    <div class="stat-number" data-count="90000">0</div>
                     <div class="stat-label">
                         <span class="fr-content">Entrepreneurs accompagnés</span>
                         <span class="en-content hidden">Entrepreneurs served</span>
@@ -109,7 +140,7 @@
     <!-- Trust Indicators Section -->
     <section class="trust-indicators">
         <div class="container">
-            <div class="trust-grid">
+            <div class="trust-grid scroll-reveal">
                 <img src="Image/hero-documents-clean-dubai.png.png" alt="Documents Dubai Business" style="height: 60px; object-fit: contain;">
                 <img src="Image/handshake-clean-dubai.png.png" alt="Partenariat Business Dubai" style="height: 60px; object-fit: contain;">
                 <img src="Image/formation-clean-dubai.png.png" alt="Formation Dubai" style="height: 60px; object-fit: contain;">
@@ -121,19 +152,19 @@
     <!-- Why Dubai Section with Video -->
     <section class="why-dubai-video">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2 class="section-title">
                     <span class="fr-content">Pourquoi Dubaï ?</span>
                     <span class="en-content hidden">Why Dubai?</span>
                 </h2>
             </div>
             <div class="video-content-grid">
-                <div class="video-wrapper">
+                <div class="video-wrapper scroll-reveal">
                     <video autoplay muted loop playsinline>
                         <source src="Video/services-handshake-dubai.mp4" type="video/mp4">
                     </video>
                 </div>
-                <div class="content-wrapper">
+                <div class="content-wrapper scroll-reveal">
                     <p class="lead-text">
                         <span class="fr-content">Dubaï est devenue la destination numéro 1 des entrepreneurs francophones en quête de liberté fiscale et d'efficacité. Avec une fiscalité à 0%, une création d'entreprise rapide et 100% en ligne, vous gardez le contrôle total sur vos revenus et votre avenir.</span>
                         <span class="en-content hidden">Dubai is now the #1 destination for French-speaking entrepreneurs seeking tax freedom and efficiency. With 0% tax, rapid company setup, and 100% online processes, you retain total control over your income and your future.</span>
@@ -156,7 +187,7 @@
     <!-- Packages Preview Section -->
     <section id="formules-preview" class="packages-preview">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2 class="section-title">
                     <span class="fr-content">Nos Formules Tout Inclus</span>
                     <span class="en-content hidden">Our All-Inclusive Packages</span>
@@ -167,7 +198,7 @@
                 </p>
             </div>
             <div class="packages-grid">
-                <div class="package-card">
+                <div class="package-card scroll-reveal">
                     <div class="package-header">
                         <h3>
                             <span class="fr-content">Formule Classique</span>
@@ -209,7 +240,7 @@
                         <span class="en-content hidden">Choose this package</span>
                     </a>
                 </div>
-                <div class="package-card featured">
+                <div class="package-card featured scroll-reveal">
                     <div class="package-badge">
                         <span class="fr-content">Plus populaire</span>
                         <span class="en-content hidden">Most popular</span>
@@ -261,7 +292,7 @@
                     </a>
                 </div>
             </div>
-            <div class="packages-cta">
+            <div class="packages-cta scroll-reveal">
                 <a href="formules.html" class="btn btn-link">
                     <span class="fr-content">Voir tous les détails</span>
                     <span class="en-content hidden">See all details</span>
@@ -274,14 +305,14 @@
     <!-- Process Section -->
     <section class="process">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2 class="section-title">
                     <span class="fr-content">Un processus simple et rapide</span>
                     <span class="en-content hidden">A simple and fast process</span>
                 </h2>
             </div>
             <div class="process-timeline">
-                <div class="process-step">
+                <div class="process-step scroll-reveal">
                     <div class="step-number">1</div>
                     <h3>
                         <span class="fr-content">Consultation gratuite</span>
@@ -292,7 +323,7 @@
                         <span class="en-content hidden">Let's analyze your project together</span>
                     </p>
                 </div>
-                <div class="process-step">
+                <div class="process-step scroll-reveal">
                     <div class="step-number">2</div>
                     <h3>
                         <span class="fr-content">Préparation documents</span>
@@ -303,7 +334,7 @@
                         <span class="en-content hidden">We handle all the paperwork</span>
                     </p>
                 </div>
-                <div class="process-step">
+                <div class="process-step scroll-reveal">
                     <div class="step-number">3</div>
                     <h3>
                         <span class="fr-content">Création société</span>
@@ -314,7 +345,7 @@
                         <span class="en-content hidden">License and visa in a few days</span>
                     </p>
                 </div>
-                <div class="process-step">
+                <div class="process-step scroll-reveal">
                     <div class="step-number">4</div>
                     <h3>
                         <span class="fr-content">Lancement activité</span>
@@ -332,7 +363,7 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header scroll-reveal">
                 <h2 class="section-title">
                     <span class="fr-content">Ils ont réussi avec nous</span>
                     <span class="en-content hidden">They succeeded with us</span>
@@ -344,7 +375,7 @@
             </div>
             
             <!-- Video Success Story -->
-            <div class="success-video-wrapper">
+            <div class="success-video-wrapper scroll-reveal">
                 <video controls poster="Image/formation-clean-dubai.png.png">
                     <source src="Video/success-formation-dubai.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la vidéo HTML5.
@@ -356,7 +387,7 @@
             </div>
             
             <div class="testimonials-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card scroll-reveal">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
                             <span class="avatar-initials">MD</span>
@@ -381,7 +412,7 @@
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
+                <div class="testimonial-card scroll-reveal">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
                             <span class="avatar-initials">TR</span>
@@ -409,7 +440,7 @@
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
+                <div class="testimonial-card scroll-reveal">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">
                             <span class="avatar-initials">SL</span>
@@ -438,34 +469,34 @@
     </section>
 
     <!-- Tax Savings Calculator CTA -->
-    <section class="calculator-cta" style="background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%); padding: 5rem 0;">
+    <section class="calculator-cta">
         <div class="container text-center">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">
+            <h2 class="scroll-reveal">
                 <span class="fr-content">Combien allez-vous économiser en impôts ?</span>
                 <span class="en-content hidden">How much will you save in taxes?</span>
             </h2>
-            <p style="color: white; font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">
+            <p class="scroll-reveal">
                 <span class="fr-content">Découvrez vos économies potentielles en 60 secondes</span>
                 <span class="en-content hidden">Discover your potential savings in 60 seconds</span>
             </p>
-            <div class="calculator-preview" style="background: white; padding: 3rem; border-radius: 10px; max-width: 600px; margin: 0 auto;">
-                <div class="savings-display" style="margin-bottom: 2rem;">
-                    <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">
+            <div class="calculator-preview scroll-reveal">
+                <div class="savings-display">
+                    <p>
                         <span class="fr-content">Économies annuelles estimées</span>
                         <span class="en-content hidden">Estimated annual savings</span>
                     </p>
-                    <div style="font-size: 3rem; font-weight: 800; color: var(--gold);">
+                    <div class="savings-amount">
                         <span>€45,000+</span>
                     </div>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    <p class="savings-note">
                         <span class="fr-content">*Basé sur un revenu de 100,000€/an</span>
                         <span class="en-content hidden">*Based on €100,000/year income</span>
                     </p>
                 </div>
-                <a href="contact.html" class="btn btn-primary btn-large" style="width: 100%; justify-content: center;">
+                <a href="contact.html" class="btn btn-primary btn-large">
                     <span class="fr-content">Calculer Mes Économies Réelles</span>
                     <span class="en-content hidden">Calculate My Real Savings</span>
-                    <i class="fas fa-calculator" style="margin-left: 0.5rem;"></i>
+                    <i class="fas fa-calculator"></i>
                 </a>
             </div>
         </div>
@@ -474,29 +505,29 @@
     <!-- Final CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
-                <h2 style="color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 1rem;">
+            <div class="cta-content scroll-reveal">
+                <h2>
                     <span class="fr-content">Rejoignez des milliers d'entrepreneurs qui ont choisi la liberté fiscale à Dubaï</span>
                     <span class="en-content hidden">Join thousands of entrepreneurs who have chosen tax freedom in Dubai</span>
                 </h2>
-                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                <p>
                     <span class="fr-content">Consultation gratuite • Devis personnalisé • Accompagnement expert francophone</span>
                     <span class="en-content hidden">Free consultation • Personalized quote • Expert French-speaking support</span>
                 </p>
-                <div class="cta-buttons" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-primary btn-large">
                         <span class="fr-content">Réserver Ma Consultation Gratuite</span>
                         <span class="en-content hidden">Book My Free Consultation</span>
-                        <i class="fas fa-calendar-check" style="margin-left: 0.5rem;"></i>
+                        <i class="fas fa-calendar-check"></i>
                     </a>
                     <a href="https://wa.me/971501234567" class="btn btn-secondary btn-large" target="_blank">
                         <span class="fr-content">Discuter sur WhatsApp</span>
                         <span class="en-content hidden">Chat on WhatsApp</span>
-                        <i class="fab fa-whatsapp" style="margin-left: 0.5rem;"></i>
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
-                <p style="margin-top: 2rem; color: var(--text-secondary);">
-                    <i class="fas fa-lock" style="margin-right: 0.5rem;"></i>
+                <p class="security-note">
+                    <i class="fas fa-lock"></i>
                     <span class="fr-content">Vos données sont sécurisées et confidentielles</span>
                     <span class="en-content hidden">Your data is secure and confidential</span>
                 </p>
@@ -570,8 +601,8 @@
                         <span class="en-content hidden">Certifications</span>
                     </h4>
                     <div class="certifications">
-                        <img src="https://via.placeholder.com/80x40/fff/003366?text=ISO" alt="ISO">
-                        <img src="https://via.placeholder.com/80x40/fff/003366?text=DET" alt="DET">
+                        <img src="https://via.placeholder.com/80x40/fff/8B5CF6?text=ISO" alt="ISO">
+                        <img src="https://via.placeholder.com/80x40/fff/8B5CF6?text=DET" alt="DET">
                     </div>
                 </div>
             </div>
@@ -593,5 +624,92 @@
     </a>
 
     <script src="script.js"></script>
+    
+    <!-- Scroll Reveal Animation Script -->
+    <script>
+        // Scroll Reveal Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('.scroll-reveal');
+            
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+            
+            const displayScrollElement = (element) => {
+                element.classList.add('revealed');
+            };
+            
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.15)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            // Initial check
+            handleScrollAnimation();
+            
+            // Throttled scroll listener
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        handleScrollAnimation();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            
+            // Counter animation for stats
+            const counters = document.querySelectorAll('[data-count]');
+            const animateCounter = (counter) => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current).toLocaleString() + '+';
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target.toLocaleString() + '+';
+                    }
+                };
+                
+                updateCounter();
+            };
+            
+            // Observe counters
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                        entry.target.classList.add('counted');
+                        animateCounter(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+            
+            // Parallax effect for floating orbs
+            document.addEventListener('mousemove', (e) => {
+                const orbs = document.querySelectorAll('.orb');
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                
+                orbs.forEach((orb, index) => {
+                    const speed = (index + 1) * 20;
+                    orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+                });
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
